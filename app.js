@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -18,9 +18,30 @@ App({
             },
             success: res => {
               console.log(res.data)
-              wx.navigateTo({
-                url: '../register/register'
-              })
+              if (res.data.sessionid) {
+                this.globalData.header.Cookie = res.data.sessionid;
+              }
+              if (res.data.code == 0) {
+                this.globalData.userInfo.cash = res.data.cash;
+                this.globalData.userInfo.superid = res.data.superid;
+                // 已经取到推广员信息,跳转到主页
+                wx.navigateTo({
+                  url: '../main/main'
+                })
+              } else if (res.data.code == -6) {
+                if (res.data.dbret == -1) {
+                  // 不是推广员
+                  wx.navigateTo({
+                    url: '../register/register'
+                  })
+                } else if (res.data.dbret == -2) {
+                  wx.showToast({
+                    title: '账号已冻结',
+                    icon: 'none',
+                    duration: 2000
+                  })
+                }
+              }
             }
           })
         } else {
@@ -50,6 +71,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    header: {
+      'Cookie': ''
+    }
   }
 })
