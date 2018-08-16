@@ -12,9 +12,15 @@ App({
         if (res.code) {
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
           wx.request({
-            url: 'https://www.yunpai8.cn/xcx/ldyxTg/onLogin',
+            url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/login.php',
             data: {
               code: res.code
+            },
+            success: res => {
+              console.log(res.data)
+              wx.navigateTo({
+                url: '../register/register'
+              })
             }
           })
         } else {
