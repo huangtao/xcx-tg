@@ -17,13 +17,18 @@ App({
               code: res.code
             },
             success: res => {
+              //console.log(res);
               console.log(res.data)
-              if (res.data.sessionid) {
-                this.globalData.header.Cookie = res.data.sessionid;
+              // 保存session
+              if (res.header && res.header['Set-Cookie']) {
+                wx.setStorage({
+                  key: 'cookieKey',
+                  data: res.header['Set-Cookie'],
+                })
               }
               if (res.data.code == 0) {
-                this.globalData.userInfo.cash = res.data.cash;
-                this.globalData.userInfo.superid = res.data.superid;
+                this.globalData.userInfo.cash = res.data.cash
+                this.globalData.userInfo.superid = res.data.superid
                 // 已经取到推广员信息,跳转到主页
                 wx.navigateTo({
                   url: '../main/main'
@@ -40,6 +45,12 @@ App({
                     icon: 'none',
                     duration: 2000
                   })
+                } else if (res.data.dbret == -3) {
+                  // 审核中
+                  this.globalData.infoData.text = "推广员资格审核中..."
+                  wx.navigateTo({
+                    url: '../info/info'
+                  })                  
                 }
               }
             }
@@ -72,8 +83,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    header: {
-      'Cookie': ''
-    }
+    infoData: {}
   }
 })

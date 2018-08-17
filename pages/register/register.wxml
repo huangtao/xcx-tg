@@ -30,7 +30,22 @@
     </view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" placeholder="备注" />
+        <input class="weui-input" placeholder="微信ID" bindinput='onInputWxID' />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="上级ID(手机号码)" bindinput='onInputSuperID' />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="推广地区" bindinput='onInputTgArea' />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="备注" bindinput='onInputTgDesc' />
       </view>
     </view>
     <button type="primary" disabled="{{!hasAgreed}}" bindtap="onButtonRegister">申请成为推广员</button>

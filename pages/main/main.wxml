@@ -1,0 +1,23 @@
+<!--main.wxml-->
+<view class="page-body">
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="page-section">
+    <view class="section__title">我的奖金: {{userInfo.cash}}</view>
+    <view class="section__title">上级电话: {{userInfo.superid}}</view>
+  </view>
+  <view class="usermotto">
+    <button type="primary" bindtap="onButtonTx">提现</button>
+    <text>备注:达到10元以上才能提现,结算t+5.</text>
+    <view class="flex-wrp" style="flex-direction:row;">
+      <button bindtap="onButtonCode">我的推广码</button>
+      <button bindtap="onButtonCode">我的客户</button>
+    </view>
+    <view class="flex-wrp" style="flex-direction:row;">
+      <button bindtap="onButtonCode">游戏充值</button>
+      <button bindtap="onButtonCode">历史提现</button>
+    </view>
+  </view>
+</view>
