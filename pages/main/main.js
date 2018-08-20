@@ -40,6 +40,22 @@ Page({
       })
     }
   },
+  onButtonCode: function (e) {
+    wx.navigateTo({
+      url: '../tgm/tgm'
+    })
+  },
+  onButtonCustomer: function (e) {
+    wx.navigateTo({
+      url: '../customer/customer'
+    })
+  },
+  onButtonCZ: function (e) {
+
+  },
+  onButtonTX: function (e) {
+
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

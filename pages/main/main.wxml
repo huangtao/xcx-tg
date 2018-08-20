@@ -13,11 +13,11 @@
     <text>备注:达到10元以上才能提现,结算t+5.</text>
     <view class="flex-wrp" style="flex-direction:row;">
       <button bindtap="onButtonCode">我的推广码</button>
-      <button bindtap="onButtonCode">我的客户</button>
+      <button bindtap="onButtonCustomer">我的客户</button>
     </view>
     <view class="flex-wrp" style="flex-direction:row;">
-      <button bindtap="onButtonCode">游戏充值</button>
-      <button bindtap="onButtonCode">历史提现</button>
+      <button bindtap="onButtonCZ">游戏充值</button>
+      <button bindtap="onButtonTX">历史提现</button>
     </view>
   </view>
 </view>

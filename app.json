@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/register/register",
     "pages/main/main",
-    "pages/info/info"
+    "pages/info/info",
+    "pages/tgm/tgm",
+    "pages/customer/customer"
   ],
   "window":{
     "backgroundTextStyle":"light",
