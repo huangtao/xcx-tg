@@ -6,60 +6,6 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        if (res.code) {
-          // 发送 res.code 到后台换取 openId, sessionKey, unionId
-          wx.request({
-            url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/login.php',
-            data: {
-              code: res.code
-            },
-            success: res => {
-              //console.log(res);
-              console.log(res.data)
-              // 保存session
-              if (res.header && res.header['Set-Cookie']) {
-                wx.setStorage({
-                  key: 'cookieKey',
-                  data: res.header['Set-Cookie'],
-                })
-              }
-              if (res.data.code == 0) {
-                this.globalData.userInfo.cash = res.data.cash
-                this.globalData.userInfo.superid = res.data.superid
-                // 已经取到推广员信息,跳转到主页
-                wx.navigateTo({
-                  url: '../main/main'
-                })
-              } else if (res.data.code == -6) {
-                if (res.data.dbret == -1) {
-                  // 不是推广员
-                  wx.navigateTo({
-                    url: '../register/register'
-                  })
-                } else if (res.data.dbret == -2) {
-                  wx.showToast({
-                    title: '账号已冻结',
-                    icon: 'none',
-                    duration: 2000
-                  })
-                } else if (res.data.dbret == -3) {
-                  // 审核中
-                  this.globalData.infoData.text = "推广员资格审核中..."
-                  wx.navigateTo({
-                    url: '../info/info'
-                  })                  
-                }
-              }
-            }
-          })
-        } else {
-          console.log('登录失败!' + res.errMsg)
-        }
-      }
-    })
     // 获取用户信息
     wx.getSetting({
       success: res => {

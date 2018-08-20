@@ -1,5 +1,4 @@
 /**register.wxss**/
-@import "../../lib/weui.wxss";
 
 .tile {
   display: flex;

@@ -17,5 +17,11 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 150px;
+}
+
+.weui-footer {
+  align-content: center;
+  font-size: 10pt;
+  margin-bottom: 0;
 }

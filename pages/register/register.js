@@ -107,7 +107,7 @@ Page({
         if (res.data.code == 0) {
           // 申请状态页面
           app.globalData.infoData.text = "推广员资格审核中..."
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../info/info'
           })
         } else {
