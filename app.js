@@ -5,6 +5,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    wx.setStorageSync('flagRun', 0)
 
     // 获取用户信息
     wx.getSetting({
@@ -26,6 +27,19 @@ App({
         }
       }
     })
+  },
+  onShow: function () {
+    console.log("app onShow");
+    var flagRun = wx.getStorageSync('flagRun');
+    if (flagRun) {
+      wx.redirectTo({
+        url: '../index/index',
+      })
+    }
+  },
+  onHide: function () {
+    console.log("app onHide");
+    wx.setStorageSync('flagRun', 1)
   },
   globalData: {
     userInfo: null,

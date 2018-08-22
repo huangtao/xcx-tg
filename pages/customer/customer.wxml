@@ -1,6 +1,31 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<!--customer.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">客户</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">下级</view>
 </view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item>
+    <view>
+      <view class="th">
+        <view class="td">玩家账号</view>
+        <view class="td">玩家昵称</view>
+        <view class="td">提成</view>
+      </view>
+      <block wx:for="{{customers}}" wx:key="unique" wx:for-item="customer">
+        <view class="tr">
+          <view class="td">{{customer.subid}}</view>
+          <view class="td">{{customer.nickname}}</view>
+          <view class="td">0.00</view>
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view>
+      <block wx:for="{{subs}}" wx:key="unique" wx:for-item="sub">
+        <text class="log-item">{{sub.subid}},{{sub.nickname}}</text>
+      </block>
+    </view>
+  </swiper-item>
+</swiper>

@@ -11,11 +11,16 @@ Page({
   //事件处理函数
   onLoad: function() {
     // 构造扫码地址
-    var redirectUrl = "https://www.yunpai8.cn/scanDownload.php";
+    var redirectUrl = encodeURI("https://www.yunpai8.cn/ldyx/scanDownload.php");
     var tgUrl = "https://open.weixin.qq.com/connect/oauth2/authorize?";
-    tgUrl += "appid=wxc761787fa285b1d3";
+    // 注意是公众号的APPID
+    tgUrl += "appid=wxb45d8aa1960d8f93";
     tgUrl += "&redirect_uri=" + redirectUrl;
-    tgUrl += "&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
+    // 我们需要获取unionid,使用snsapi_userinfo
+    // 只需要openid的snsapi_base即可,不会弹出授权
+    // state传salerid
+    tgUrl += "&response_type=code&scope=snsapi_userinfo";
+    tgUrl += "&state=" + app.globalData.userInfo.salerid + "#wechat_redirect";
 
     var size = this.setCanvasSize();
     this.createQrCode(tgUrl, "mycanvas", size.w, size.h);

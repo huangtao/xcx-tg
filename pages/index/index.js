@@ -86,8 +86,9 @@ Page({
                 })
               }
               if (res.data.code == 0) {
-                app.globalData.userInfo.cash = res.data.cash
-                app.globalData.userInfo.superid = res.data.superid
+                app.globalData.userInfo.salerid = res.data.salerid;
+                app.globalData.userInfo.cash = res.data.cash;
+                app.globalData.userInfo.superid = res.data.superid;
                 // 已经取到推广员信息,跳转到主页
                 wx.redirectTo({
                   url: '../main/main'
