@@ -1,23 +1,20 @@
 <!--main.wxml-->
 <view class="page">
-  <view class="page__hd">
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="icon-box__title">{{userInfo.nickName}}</text>
+  <view class="cash-box">
+    <text class="cash">{{cash}}</text>
+    <button type="primary" style="width:200px" bindtap="onButtonTx">提现</button>
+    <text style="font-size:12px">备注:达到10元以上才能提现,结算t+5.</text>
   </view>
-  <view class="page-section">
-    <view class="section__title">我的奖金: {{userInfo.cash}}</view>
-    <view class="section__title">上级电话: {{userInfo.superid}}</view>
-  </view>
-  <view class="usermotto">
-    <button type="primary" bindtap="onButtonTx">提现</button>
-    <text>备注:达到10元以上才能提现,结算t+5.</text>
-    <view class="flex-wrp" style="flex-direction:row;">
-      <button bindtap="onButtonCode">我的推广码</button>
-      <button bindtap="onButtonCustomer">我的客户</button>
-    </view>
-    <view class="flex-wrp" style="flex-direction:row;">
-      <button bindtap="onButtonCZ">游戏充值</button>
-      <button bindtap="onButtonTX">历史提现</button>
+  <view class="weui-grids">
+    <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+      <navigator url="{{item.url}}">
+        <view class="weui-grid__bg">
+          <view class="weui-grid__icon">
+            <text class="{{item.icon}}"></text>
+          </view>
+          <text class="weui-grid__label">{{item.name}}</text>
+        </view>
+      </navigator>
     </view>
   </view>
 </view>
