@@ -1,0 +1,15 @@
+<!--txorder.wxml-->
+<view>
+  <view class="th">
+    <view class="td">日期</view>
+    <view class="td">金额</view>
+    <view class="td">状态</view>
+  </view>
+  <block wx:for="{{orders}}" wx:key="unique" wx:for-item="order">
+    <view class="tr">
+      <view class="td">{{order.Date}}</view>
+      <view class="td">{{order.cash}}</view>
+      <view class="td">{{order.state}}</view>
+    </view>
+  </block>
+</view>

@@ -692,7 +692,30 @@
     return qrframe;
   }
 
+  var drawImg = function (src, width,ctx) {
+    var imgSize = width / 5;
+    var imgPos = width / 10 * 4;
+    var imgPosFix = width / 120;
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 1;
+    //ctx.globalAlpha = 0.8;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
 
+    // ctx.beginPath();
+    // ctx.moveTo(imgPos - imgPosFix, imgPos - imgPosFix);
+    
+    // // 绘制layer
+    // ctx.lineTo(imgPos + imgSize + imgPosFix, imgPos - imgPosFix);
+    // ctx.lineTo(imgPos + imgSize + imgPosFix, imgPos + imgSize + imgPosFix);
+    // ctx.lineTo(imgPos - imgPosFix, imgPos + imgSize + imgPosFix);
+    // ctx.lineTo(imgPos - imgPosFix, imgPos - imgPosFix);
+    
+    // ctx.stroke();
+    // ctx.closePath();
+
+    ctx.drawImage(src, imgPos, imgPos, imgSize, imgSize);
+  }
 
 
   var _canvas = null;
@@ -750,7 +773,7 @@
     /**
      * 新增$this参数，传入组件的this,兼容在组件中生成
      */
-    draw: function (str, canvas, cavW, cavH, $this, ecc) {
+    draw: function (str, canvas, cavW, cavH, $this, ecc, src) {
       var that = this;
       ecclevel = ecc || ecclevel;
       canvas = canvas || _canvas;
@@ -780,6 +803,7 @@
           }
         }
       }
+      drawImg(src,cavW,ctx);
       ctx.draw();
     }
   }

@@ -18,14 +18,24 @@ Page({
         icon: 'iconfont icon-nav_promoter'
       },
       {
+        name: '提现记录',
+        url: '/pages/txorder/txorder',
+        icon: 'iconfont icon-jizhangben'
+      },
+      {
         name: '游戏充值',
         url: '',
         icon: 'iconfont icon-48'
       },
       {
-        name: '提现记录',
+        name: '推广员审批',
         url: '',
-        icon: 'iconfont icon-jizhangben'
+        icon: 'iconfont icon-48'
+      },
+      {
+        name: '提现审批',
+        url: '',
+        icon: 'iconfont icon-48'
       }
     ]
   },

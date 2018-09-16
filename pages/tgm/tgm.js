@@ -43,6 +43,6 @@ Page({
   },
   createQrCode: function (url, canvasId, cavW, cavH) {
     //调用插件中的draw方法，绘制二维码图片
-    QR.api.draw(url, canvasId, cavW, cavH);
+    QR.api.draw(url, canvasId, cavW, cavH, this, null, '/images/logo.png');
   }
 })

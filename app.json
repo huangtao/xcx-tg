@@ -6,7 +6,8 @@
     "pages/main/main",
     "pages/info/info",
     "pages/tgm/tgm",
-    "pages/customer/customer"
+    "pages/customer/customer",
+    "pages/txorder/txorder"
   ],
   "window":{
     "backgroundTextStyle":"light",
