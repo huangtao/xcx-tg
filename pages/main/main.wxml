@@ -2,7 +2,7 @@
 <view class="page">
   <view class="cash-box">
     <text class="cash">{{cash}}</text>
-    <button type="primary" style="width:200px" bindtap="onButtonTx">提现</button>
+    <button type="primary" style="width:200px" bindtap="onButtonTX">提现</button>
     <text style="font-size:12px">备注:达到10元以上才能提现,结算t+5.</text>
   </view>
   <view class="weui-grids">
