@@ -1,5 +1,6 @@
 //customer.js
 const util = require('../../utils/util.js')
+const app = getApp()
 
 Page({
   data: {
@@ -50,9 +51,10 @@ Page({
       header.Cookie = cookie;
     }
     wx.request({
-      url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/payCash.php',
+      url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/paycash.php',
       header: header,
       data: {
+        opsalerid: app.globalData.userInfo.salerid,
         id: id,
         salerid: salerid,
         cash: cash

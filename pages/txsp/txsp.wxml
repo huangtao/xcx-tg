@@ -11,8 +11,8 @@
       <view class="td">{{order.Dates}}</view>
       <view class="td">{{order.salerid}}</view>
       <view class="td">{{order.cash}}</view>
-      <view class="td" data-order-id="{{order.id}}" data-order-salerid="{{order.salerid}}" data-order-cash="{{order.cash}}" >
-        <button type="primary" size="mini" bindtap="onButtonPayCash">同意</button>
+      <view class="td">
+        <button type="primary" size="mini" data-order-id="{{order.id}}" data-order-salerid="{{order.salerid}}" data-order-cash="{{order.cash}}" bindtap="onButtonPayCash">同意</button>
       </view>
     </view>
   </block>
