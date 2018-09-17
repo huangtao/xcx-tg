@@ -1,0 +1,19 @@
+<!--txorder.wxml-->
+<view>
+  <view class="th">
+    <view class="td">日期</view>
+    <view class="td">推广员</view>
+    <view class="td">金额</view>
+    <view class="td">操作</view>
+  </view>
+  <block wx:for="{{orders}}" wx:key="unique" wx:for-item="order">
+    <view class="tr">
+      <view class="td">{{order.Dates}}</view>
+      <view class="td">{{order.salerid}}</view>
+      <view class="td">{{order.cash}}</view>
+      <view class="td" data-order-id="{{order.id}}" data-order-salerid="{{order.salerid}}" data-order-cash="{{order.cash}}" >
+        <button type="primary" size="mini" bindtap="onButtonPayCash">同意</button>
+      </view>
+    </view>
+  </block>
+</view>
