@@ -29,7 +29,7 @@ Page({
       url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/txorder.php',
       header: header,
       success: res => {
-        console.log(res.data);
+        //console.log(res.data);
         if (res.data.code == 0) {
           this.setData({
             orders: res.data.list

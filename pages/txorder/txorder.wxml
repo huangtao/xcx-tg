@@ -7,9 +7,9 @@
   </view>
   <block wx:for="{{orders}}" wx:key="unique" wx:for-item="order">
     <view class="tr">
-      <view class="td">{{order.Date}}</view>
+      <view class="td">{{order.Dates}}</view>
       <view class="td">{{order.cash}}</view>
-      <view class="td">{{order.state}}</view>
+      <view class="td">{{order.phase}}</view>
     </view>
   </block>
 </view>

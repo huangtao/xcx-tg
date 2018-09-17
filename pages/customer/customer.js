@@ -34,7 +34,7 @@ Page({
         leixin: 0
       },
       success: res => {
-        console.log(res.data);
+        //console.log(res.data);
         if (res.data.code == 0) {
           this.setData({
             customers: res.data.list

@@ -34,7 +34,7 @@ Page({
       },
       {
         name: '提现审批',
-        url: '',
+        url: '/pages/txsp/txsp',
         icon: 'iconfont icon-48'
       }
     ]
