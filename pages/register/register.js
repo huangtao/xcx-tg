@@ -30,9 +30,6 @@ Page({
   onInputMobile: function (e) {
     this.data.mobile = e.detail.value;
   },
-  onInputWxID: function (e) {
-    this.data.wxid = e.detail.value;
-  },
   onInputSuperID: function (e) {
     this.data.superID = e.detail.value;
   },
@@ -51,14 +48,14 @@ Page({
       })
       return
     }
-    // if (this.data.SID.length != 18) {
-    //   wx.showToast({
-    //     title: '身份证号码不对',
-    //     icon: 'none',
-    //     duration: 2000
-    //   })
-    //   return
-    // }
+    if (this.data.SID.length != 18) {
+      wx.showToast({
+        title: '身份证号码不对',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
     if (this.data.mobile == '') {
       wx.showToast({
         title: '手机号码不能为空',
@@ -67,14 +64,14 @@ Page({
       })
       return
     }
-    if (this.data.wxid == '') {
-      wx.showToast({
-        title: '微信ID不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return
-    }
+    // if (this.data.wxid == '') {
+    //   wx.showToast({
+    //     title: '微信ID不能为空',
+    //     icon: 'none',
+    //     duration: 2000
+    //   })
+    //   return
+    // }
     if (this.data.tgArea == '') {
       wx.showToast({
         title: '推广地区不能为空',
@@ -97,7 +94,6 @@ Page({
         nickname: app.globalData.userInfo.nickName,
         sid: this.data.SID,
         mobile: this.data.mobile,
-        wxid: this.data.wxid,
         superid: this.data.superID,
         tgArea: this.data.tgArea,
         tgDesc: this.data.tgDesc

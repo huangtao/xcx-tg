@@ -8,7 +8,8 @@
     "pages/tgm/tgm",
     "pages/customer/customer",
     "pages/txorder/txorder",
-    "pages/txsp/txsp"
+    "pages/txsp/txsp",
+    "pages/tgysp/tgysp"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -89,6 +89,8 @@ Page({
                 app.globalData.userInfo.salerid = res.data.salerid;
                 app.globalData.userInfo.cash = res.data.cash;
                 app.globalData.userInfo.superid = res.data.superid;
+                app.globalData.userInfo.qx_tgsp = res.data.qx_tgsp;
+                app.globalData.userInfo.qx_txsp = res.data.qx_txsp;
                 // 已经取到推广员信息,跳转到主页
                 wx.redirectTo({
                   url: '../main/main'

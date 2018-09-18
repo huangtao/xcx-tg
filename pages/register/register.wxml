@@ -5,9 +5,11 @@
   </view>
   <view class="xieyi">
     <text>1.作为本公司的推广员，应当遵守公司的管理制度。</text>
-    <text>2.铃铛游戏作为一个休闲的游戏平台，推广时严禁使用带暗示的赌博倾向用语，一经发现永久取消推广员资格，情节严重的将举报公安机关处理！。</text>
-    <text>3.在推广过程中发生的费用和法律纠纷由推广员承担。</text>
-    <text>4.推广员资格为每年年审一次，年审不通过的将取消推广员资格。</text>
+    <text>2.注册时您应该使用真实的身份信息,非真实信息将影响提现。</text>
+    <text>3.铃铛游戏作为一个休闲的游戏平台，推广时严禁使用带暗示的赌博倾向用语，一经发现永久取消推广员资格，情节严重的将举报公安机关处理！</text>
+    <text>4.在推广过程中发生的费用和法律纠纷由推广员承担。</text>
+    <text>5.铃铛游戏有权随时调整奖励额度和方式。</text>
+    <text>6.推广员资格为每年年审一次，年审不通过的将取消推广员资格。</text>
     <checkbox-group bindchange="checkboxChange">
       <checkbox>同意以上协议</checkbox>
     </checkbox-group>
@@ -26,11 +28,6 @@
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <input class="weui-input" type="digit" placeholder="手机号码" bindinput='onInputMobile' />
-      </view>
-    </view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" placeholder="微信ID" bindinput='onInputWxID' />
       </view>
     </view>
     <view class="weui-cells weui-cells_after-title">
