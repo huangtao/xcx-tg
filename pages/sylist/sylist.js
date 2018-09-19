@@ -9,6 +9,7 @@ Page({
     winWidth: 0,
     winHeight: 0,
     currentTab: 0,
+    selDate: '2018-09-19'
   },
   onLoad: function () {
     var that = this;
@@ -30,10 +31,11 @@ Page({
       header.Cookie = cookie;
     }
     wx.request({
-      url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/customer.php',
+      url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/sylist.php',
       header: header,
       data: {
-        leixin: lx
+        leixin: lx,
+        date: this.data.selDate
       },
       success: res => {
         //console.log(res.data);

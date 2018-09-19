@@ -39,7 +39,7 @@
   font-size: 30rpx;
 }
 .td {
-  width: 50%;
+  width: 33%;
   text-align: center;
 }
 .log-list {

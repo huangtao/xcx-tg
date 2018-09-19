@@ -9,12 +9,14 @@
     <view>
       <view class="th">
         <view class="td">玩家账号</view>
-        <view class="td">玩家昵称</view>
+        <view class="td">昵称</view>
+        <view class="td">提成</view>
       </view>
       <block wx:for="{{customers}}" wx:key="unique" wx:for-item="customer">
         <view class="tr">
-          <view class="td">{{customer.subid}}</view>
+          <view class="td">{{customer.id}}</view>
           <view class="td">{{customer.nickname}}</view>
+          <view class="td">{{customer.cash}}</view>
         </view>
       </block>
     </view>
@@ -24,11 +26,13 @@
       <view class="th">
         <view class="td">下级账号</view>
         <view class="td">昵称</view>
+        <view class="td">提成</view>
       </view>
       <block wx:for="{{subs}}" wx:key="unique" wx:for-item="sub">
         <view class="tr">
-          <view class="td">{{sub.subid}}</view>
+          <view class="td">{{sub.id}}</view>
           <view class="td">{{sub.nickname}}</view>
+          <view class="td">{{sub.cash}}</view>
         </view>
       </block>
     </view>

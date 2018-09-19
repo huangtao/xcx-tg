@@ -25,6 +25,12 @@ Page({
         icon: 'iconfont icon-jizhangben',
         show: true
       },
+      {
+        name: '收益明细',
+        url: '/pages/sylist/sylist',
+        icon: 'iconfont icon-shouyi1',
+        show: true
+      },
       // {
       //   name: '游戏充值',
       //   url: '',
@@ -48,10 +54,10 @@ Page({
   //事件处理函数
   onLoad: function () {
     if (app.globalData.userInfo.qx_tgsp > 0) {
-      this.data.routers[3].show = true;
+      this.data.routers[4].show = true;
     }
     if (app.globalData.userInfo.qx_txsp > 0) {
-      this.data.routers[4].show = true;
+      this.data.routers[5].show = true;
     }
     this.setData({
       cash: app.globalData.userInfo.cash,

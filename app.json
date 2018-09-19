@@ -9,7 +9,8 @@
     "pages/customer/customer",
     "pages/txorder/txorder",
     "pages/txsp/txsp",
-    "pages/tgysp/tgysp"
+    "pages/tgysp/tgysp",
+    "pages/sylist/sylist"
   ],
   "window":{
     "backgroundTextStyle":"light",
