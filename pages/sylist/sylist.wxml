@@ -1,4 +1,10 @@
 <!--customer.wxml-->
+<picker mode="date" value="{{selDate}}" start="2018-09-01" end="2118-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择的日期: {{selDate}}
+    </view>
+</picker>
+
 <view class="swiper-tab">
   <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">客户</view>
   <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">下级</view>

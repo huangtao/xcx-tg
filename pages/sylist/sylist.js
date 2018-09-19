@@ -9,7 +9,7 @@ Page({
     winWidth: 0,
     winHeight: 0,
     currentTab: 0,
-    selDate: '2018-09-19'
+    selDate: util.formatDate(new Date())
   },
   onLoad: function () {
     var that = this;
@@ -22,6 +22,12 @@ Page({
       },
     });
     this.getMyData(0);
+  },
+  bindDateChange: function (e) {
+    this.setData({
+      selDate: e.detail.value
+    })
+    this.getMyData(this.data.currentTab);
   },
   getMyData: function (lx) {
     // 提交申请请求到服务器
