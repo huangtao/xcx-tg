@@ -11,12 +11,14 @@
         <view class="td">玩家账号</view>
         <view class="td">玩家昵称</view>
       </view>
+      <scroll-view scroll-y style="height: {{winHeight - 31 - 80}}px;">
       <block wx:for="{{customers}}" wx:key="unique" wx:for-item="customer">
         <view class="tr">
           <view class="td">{{customer.subid}}</view>
           <view class="td">{{customer.nickname}}</view>
         </view>
       </block>
+      </scroll-view>
     </view>
   </swiper-item>
   <swiper-item>

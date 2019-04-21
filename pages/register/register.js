@@ -64,6 +64,14 @@ Page({
       })
       return
     }
+    if (this.data.superID == '') {
+      wx.showToast({
+        title: '上级不能为空',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
     // if (this.data.wxid == '') {
     //   wx.showToast({
     //     title: '微信ID不能为空',
