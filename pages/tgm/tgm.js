@@ -23,7 +23,11 @@ Page({
     tgUrl += "&state=" + app.globalData.userInfo.salerid + "#wechat_redirect";
 
     var size = this.setCanvasSize();
-    this.createQrCode(tgUrl, "mycanvas", size.w, size.h);
+    var self = this;
+    // 不加延时在有些机型会不显示推广码
+    setTimeout(function () {
+      self.createQrCode(tgUrl, "mycanvas", size.w, size.h);
+    }, 500);
   },
   // 适配不同屏幕大小的canvas
   setCanvasSize: function() {
