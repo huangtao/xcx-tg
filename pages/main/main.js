@@ -78,10 +78,10 @@ Page({
 
   },
   onButtonTX: function (e) {
-    if (this.data.cash < 1) {
-      // 1元以下不能提现
+    if (this.data.cash < 50) {
+      // 50元以下不能提现
       wx.showToast({
-        title: '超过1元才能提现!',
+        title: '超过50元才能提现!',
         icon: 'none',
         duration: 3000
       })

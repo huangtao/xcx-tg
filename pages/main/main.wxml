@@ -3,7 +3,7 @@
   <view class="cash-box">
     <text class="cash">{{cash}}</text>
     <button type="primary" style="width:200px" bindtap="onButtonTX">提现</button>
-    <text style="font-size:12px">备注:达到1元以上才能提现,结算t+5.</text>
+    <text style="font-size:12px">备注:达到50元以上才能提现,结算t+5.</text>
   </view>
   <view class="weui-grids">
     <view class="weui-grid" wx:for="{{routers}}" wx:if="{{item.show}}" wx:key="name">
