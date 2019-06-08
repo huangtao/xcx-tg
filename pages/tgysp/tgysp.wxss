@@ -1,52 +1,31 @@
-.swiper-tab {
-  width: 100%;
-  border-bottom: 2rpx solid #777777;
-  text-align: center;
-  line-height: 80rpx;
-}
-.swiper-tab-list {
-  font-size: 30rpx;
-  display: inline-block;
-  width: 50%;
-  color: #777777;
-}
-.on {
-  color: #da7c0c;
-  border-bottom: 5rpx solid #da7c0c;
+/**register.wxss**/
+
+.tile {
+  display: flex;
+  align-items: center;
 }
 
-.swiper-box {
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.th {
-  display: flex;
-  width: 100%;
-  color: #fff;
-  background: gray;
-  border-bottom: 2rpx solid #777777;
-  text-align: center;
-  line-height: 80rpx;
-  font-size: 30rpx;
-}
-.tr {
-  display: flex;
-  width: 100%;
-  line-height: 60rpx;
-  font-size: 30rpx;
-}
-.td {
-  width: 33%;
-  text-align: center;
-}
-.log-list {
+.xieyi {
   display: flex;
   flex-direction: column;
-  padding: 40rpx;
+  align-items: center;
 }
-.log-item {
-  margin: 10rpx;
+
+.section {
+  margin: 10px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
 }

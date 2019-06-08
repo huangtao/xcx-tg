@@ -1,0 +1,19 @@
+<!--txorder.wxml-->
+<view>
+  <view class="th">
+    <view class="td">手机号码</view>
+    <view class="td">真实姓名</view>
+    <view class="td">上级</view>
+    <view class="td">操作</view>
+  </view>
+  <block wx:for="{{tgylist}}" wx:key="unique" wx:for-item="tgy">
+    <view class="tr">
+      <view class="td">{{tgy.salerid}}</view>
+      <view class="td">{{tgy.realname}}</view>
+      <view class="td">{{tgy.superid}}</view>
+      <view class="td">
+        <button type="primary" size="mini" data-tgy-salerid="{{tgy.salerid}}" bindtap="onButtonAgree">同意</button>
+      </view>
+    </view>
+  </block>
+</view>

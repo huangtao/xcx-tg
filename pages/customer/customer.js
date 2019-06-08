@@ -42,6 +42,15 @@ Page({
         //console.log(res.data);
         if (res.data.code == 0) {
           if (lx == 0) {
+            // 将玩家账号的wx_去掉
+            for (var i = 0; i < res.data.list.length; i++) {
+              var userid = res.data.list[i].subid;
+              var pos = userid.indexOf("wx_");
+              if (pos != -1) {
+                userid = res.data.list[i].subid.substring(pos + 3);
+                res.data.list[i].subid = userid;
+              }
+            }
             this.setData({
               customers: res.data.list,
               custile: '客户('+res.data.list.length+')'

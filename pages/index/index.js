@@ -92,15 +92,21 @@ Page({
                 app.globalData.userInfo.subMax = res.data.subMax;
                 app.globalData.userInfo.qx_tgsp = res.data.qx_tgsp;
                 app.globalData.userInfo.qx_txsp = res.data.qx_txsp;
+                app.globalData.userInfo.diamond = res.data.diamond;
+                app.globalData.userInfo.gold = res.data.gold;
                 // 已经取到推广员信息,跳转到主页
                 wx.redirectTo({
                   url: '../main/main'
                 })
               } else if (res.data.code == -6) {
                 if (res.data.dbret == -1) {
-                  // 不是推广员
+                  // 不是推广员,提示不能登录
+                  // wx.redirectTo({
+                  //   url: '../register/register'
+                  // })
+                  app.globalData.infoData.text = "只有推广员才能登录!"
                   wx.redirectTo({
-                    url: '../register/register'
+                     url: '../info/info'
                   })
                 } else if (res.data.dbret == -2) {
                   wx.showToast({

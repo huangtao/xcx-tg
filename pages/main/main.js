@@ -6,6 +6,8 @@ Page({
   data: {
     cash: 0.00,
     superid: '',
+    diamond: 0,
+    gold: 0,
     routers: [
       {
         name: '推广码',
@@ -38,10 +40,10 @@ Page({
       //   show: true
       // },
       {
-        name: '推广员审批',
+        name: '开通推广员',
         url: '/pages/tgysp/tgysp',
         icon: 'iconfont icon-shenhe',
-        show: false
+        show: true
       },
       {
         name: '提现审批',
@@ -53,14 +55,16 @@ Page({
   },
   //事件处理函数
   onLoad: function () {
-    if (app.globalData.userInfo.qx_tgsp > 0) {
-      this.data.routers[4].show = true;
-    }
+    // if (app.globalData.userInfo.qx_tgsp > 0) {
+    //   this.data.routers[4].show = true;
+    // }
     if (app.globalData.userInfo.qx_txsp > 0) {
       this.data.routers[5].show = true;
     }
     this.setData({
       cash: app.globalData.userInfo.cash,
+      diamond: app.globalData.userInfo.diamond,
+      gold: app.globalData.userInfo.gold,
       routers: this.data.routers
     })
   },

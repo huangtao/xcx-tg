@@ -35,7 +35,7 @@ Page({
       header.Cookie = cookie;
     }
     wx.request({
-      url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/sylist.php',
+      url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/symx.php',
       header: header,
       data: {
         leixin: lx,

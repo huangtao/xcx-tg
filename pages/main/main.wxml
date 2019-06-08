@@ -1,5 +1,12 @@
 <!--main.wxml-->
 <view class="page">
+  <view class="title">
+    <image src='/images/diamond.png' class='img' />
+    <view>{{diamond}}</view>
+    <view class="span"></view>
+    <image src='/images/yinzi.png' class='img' />
+    <view>{{gold}}</view>
+  </view>
   <view class="cash-box">
     <text class="cash">{{cash}}</text>
     <button type="primary" style="width:200px" bindtap="onButtonTX">提现</button>
