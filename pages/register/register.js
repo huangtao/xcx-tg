@@ -5,11 +5,9 @@ const app = getApp()
 Page({
   data: {
     realname: '',
-    SID: '',
     mobile: '',
     wxid: '',
     superID: '',
-    tgArea: '',
     tgDesc: '',
     hasAgreed: false,
   },
@@ -24,17 +22,11 @@ Page({
   onInputName: function (e) {
     this.data.realname = e.detail.value;
   },
-  onInputSID: function (e) {
-    this.data.SID = e.detail.value;
-  },
   onInputMobile: function (e) {
     this.data.mobile = e.detail.value;
   },
   onInputSuperID: function (e) {
     this.data.superID = e.detail.value;
-  },
-  onInputTgArea: function (e) {
-    this.data.tgArea = e.detail.value;
   },
   onInputTgDesc: function (e) {
     this.data.tgDesc = e.detail.value;
@@ -43,14 +35,6 @@ Page({
     if (this.data.realname == '') {
       wx.showToast({
         title: '姓名不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return
-    }
-    if (this.data.SID.length != 18) {
-      wx.showToast({
-        title: '身份证号码不对',
         icon: 'none',
         duration: 2000
       })
@@ -80,22 +64,6 @@ Page({
     //   })
     //   return
     // }
-    if (this.data.superID == '') {
-      wx.showToast({
-        title: '上级ID(手机号码)不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return
-    }
-    if (this.data.tgArea == '') {
-      wx.showToast({
-        title: '推广地区不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return
-    }
     // 提交申请请求到服务器
     var cookie = wx.getStorageSync('cookieKey');
     var header = {};
@@ -108,10 +76,8 @@ Page({
       data: {
         realname: this.data.realname,
         nickname: app.globalData.userInfo.nickName,
-        sid: this.data.SID,
         mobile: this.data.mobile,
         superid: this.data.superID,
-        tgArea: this.data.tgArea,
         tgDesc: this.data.tgDesc
       },
       success: res => {
