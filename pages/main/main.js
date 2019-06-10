@@ -33,16 +33,16 @@ Page({
         icon: 'iconfont icon-shouyi1',
         show: true
       },
-      // {
-      //   name: '游戏充值',
-      //   url: '',
-      //   icon: 'iconfont icon-48',
-      //   show: true
-      // },
       {
         name: '开通推广员',
         url: '/pages/tgysp/tgysp',
         icon: 'iconfont icon-shenhe',
+        show: true
+      },
+      {
+        name: '推广赠送',
+        url: '/pages/tgzs/tgzs',
+        icon: 'iconfont icon-48',
         show: true
       },
       {
@@ -66,6 +66,12 @@ Page({
       diamond: app.globalData.userInfo.diamond,
       gold: app.globalData.userInfo.gold,
       routers: this.data.routers
+    })
+  },
+  onShow: function () {
+    this.setData({
+      diamond: app.globalData.userInfo.diamond,
+      gold: app.globalData.userInfo.gold
     })
   },
   onButtonCode: function (e) {

@@ -50,6 +50,11 @@ Page({
       })
       return
     }
+    // 检查ID如果没有wx_则加上
+    var userid = this.data.userid;
+    if (userid.indexOf("wx_") == -1) {
+      userid = "wx_" + this.data.userid;
+    }
     // 提交申请请求到服务器
     var cookie = wx.getStorageSync('cookieKey');
     var header = {};
@@ -60,7 +65,7 @@ Page({
       url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/kt_tgy.php',
       header: header,
       data: {
-        userid: this.data.userid,
+        userid: userid,
         realname: this.data.realname,
         mobile: this.data.mobile,
         superid: app.globalData.userInfo.salerid,
@@ -94,7 +99,7 @@ Page({
             // 已经是推广员了
             wx.showModal({
               title: '提示',
-              content: '您已经是推广员了!',
+              content: '已经是推广员了!',
               showCancel: false
             })
           } else if (res.data.dbret == -4) {

@@ -58,7 +58,7 @@ Page({
           } else if (lx == 1) {
             this.setData({
               subs: res.data.list,
-              subtile: '下级(' + res.data.list.length + '/' + app.globalData.userInfo.subMax + ')'
+              subtile: '下级(' + res.data.list.length + '/' + app.globalData.userInfo.maxsub + ')'
             });            
           }
         }

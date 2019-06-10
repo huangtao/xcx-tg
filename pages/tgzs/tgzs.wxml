@@ -1,0 +1,29 @@
+<!--register.wxml-->
+<view class="page-body">
+  <view class="page-section">
+    <text>赠送后客户需要重新登陆才能刷新</text>
+  </view>
+  <view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="游戏ID或下级账号" bindinput="onInputZsid" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" placeholder="赠送钻石数量" bindinput="onInputDiamond" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" placeholder="赠送银子数量" bindinput="onInputGold" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="备注" bindinput='onInputZsDesc' />
+      </view>
+    </view>
+    <button type="primary" bindtap="onButtonRegister">确定</button>
+  </view>
+</view>

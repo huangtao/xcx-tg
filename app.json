@@ -10,6 +10,7 @@
     "pages/txorder/txorder",
     "pages/txsp/txsp",
     "pages/tgysp/tgysp",
+    "pages/tgzs/tgzs",
     "pages/sylist/sylist"
   ],
   "window": {
