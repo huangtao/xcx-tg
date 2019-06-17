@@ -31,7 +31,7 @@ Page({
   onInputZsDesc: function(e) {
     this.data.ZsDesc = e.detail.value;
   },
-  onButtonRegister: function(e) {
+  onButtonZS: function(e) {
     if (this.data.zsid == '') {
       wx.showToast({
         title: 'ID不能为空',
@@ -53,6 +53,22 @@ Page({
     if (isNaN(gold)) {
       wx.showToast({
         title: '数量不对',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+    if (diamond < 0 || gold < 0) {
+      wx.showToast({
+        title: '数量不对',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+    if (diamond == 0 && gold == 0) {
+      wx.showToast({
+        title: '没有指定赠送数量',
         icon: 'none',
         duration: 2000
       })

@@ -24,6 +24,6 @@
         <input class="weui-input" placeholder="备注" bindinput='onInputZsDesc' />
       </view>
     </view>
-    <button type="primary" bindtap="onButtonRegister">确定</button>
+    <button type="primary" bindtap="onButtonZS">确定</button>
   </view>
 </view>
