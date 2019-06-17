@@ -59,7 +59,7 @@ Page({
     //   this.data.routers[4].show = true;
     // }
     if (app.globalData.userInfo.qx_txsp > 0) {
-      this.data.routers[5].show = true;
+      this.data.routers[6].show = true;
     }
     this.setData({
       cash: app.globalData.userInfo.cash,
