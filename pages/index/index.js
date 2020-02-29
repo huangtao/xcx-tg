@@ -74,6 +74,7 @@ Page({
             url: 'https://www.yunpai8.cn/ldyx/xcx/ldyxTg/login.php',
             data: {
               code: res.code,
+              //nickname: '😂😂😂'
               nickname: app.globalData.userInfo.nickName
             },
             success: res => {
