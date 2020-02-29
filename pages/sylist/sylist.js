@@ -62,22 +62,24 @@ Page({
               res.data.list[i].desc = res.data.list[i].nickname + "(" + userid + ")下级推广奖励";
             }
           }
-          // // 按日期排序
-          // res.data.list.sort((a, b) => {
-          //   var arr_a = a.date.split(" ");
-          //   var strDate_a = arr_a[0].split("-");
-          //   var strTime_a = arr_a[1].split(":");
-          //   var arr_b = b.date.split(" ");
-          //   var strDate_b = arr_b[0].split("-");
-          //   var strTime_b = arr_b[1].split(":");
+          // 按日期排序
+          res.data.list.sort((a, b) => {
+            var arr_a = a.date.split(" ");
+            var strDate_a = arr_a[0].split("-");
+            var strTime_a = arr_a[1].split(":");
+            var arr_b = b.date.split(" ");
+            var strDate_b = arr_b[0].split("-");
+            var strTime_b = arr_b[1].split(":");
 
-          //   var da = new Date(strDate_a[0], (strDate_a[1]-parseInt(1)), strDate_a[2], strTime_a[0], strTime_a[1], strTime_a[2]);
-          //   var db = new Date(strDate_b[0], (strDate_b[1] - parseInt(1)), strDate_b[2], strTime_b[0], strTime_b[1], strTime_b[2]);
-          //   var tma = da.getTime();
-          //   var tmb = db.getTime();
-          //   return tma > tmb;
-          // });
-          // res.data.list.reverse();
+            var da = new Date(strDate_a[0], (strDate_a[1] - parseInt(1)), strDate_a[2], strTime_a[0], strTime_a[1], strTime_a[2]);
+            var db = new Date(strDate_b[0], (strDate_b[1] - parseInt(1)), strDate_b[2], strTime_b[0], strTime_b[1], strTime_b[2]);
+            var tma = da.getTime();
+            var tmb = db.getTime();
+            if (tma > tmb) return -1;
+            else if (tma < tmb) return 1;
+            return 0;
+          });
+          //res.data.list.reverse();
           this.setData({
             mxlist: res.data.list
           });
