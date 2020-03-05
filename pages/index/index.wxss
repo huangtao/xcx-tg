@@ -4,7 +4,11 @@
   flex-direction: column;
   align-items: center;
 }
-
+.xieyi {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;

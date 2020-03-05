@@ -1,17 +1,28 @@
 <!--index.wxml-->
 <view class='page'>
   <!-- 页头 -->
+  <view class="xieyi">
+    <text>1.连续3个月内推广总收益低于20元的，平台有权取消推广员资格。</text>
+    <text>2.推广员资格为每年年审一次，年审不通过的将取消推广员资格。</text>
+    <text>3.平台有权随时调整奖励额度和方式。</text>
+    <text>4.此推广员系统并未开放注册,联系客服或上级开通后方可使用。</text>
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox>同意以上用户协议</checkbox>
+    </checkbox-group>
+  </view>
   <view class="container">
     <view class="userinfo">
-      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请授权登录 </button>
+      <button wx:if="{{!hasUserInfo && canIUse}}" disabled="{{!hasAgreed}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
       <block wx:else>
         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </block>
     </view>
+    <!--
     <view class="usermotto">
       <text class="user-motto">{{motto}}</text>
     </view>
+    -->
   </view>
   <!-- 页脚 -->
   <view class="weui-footer">Copyright © 2018 云牌网络</view>
