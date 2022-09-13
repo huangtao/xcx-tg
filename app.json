@@ -10,6 +10,8 @@
     "pages/txorder/txorder",
     "pages/txsp/txsp",
     "pages/tgysp/tgysp",
+    "pages/agent/agent",
+    "pages/agentEdit/agentEdit",
     "pages/tgzs/tgzs",
     "pages/sylist/sylist"
   ],

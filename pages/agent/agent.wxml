@@ -1,0 +1,40 @@
+<!--register.wxml-->
+<view class="page-body">
+  <view class="page-section">
+    <text>将客户开通为云牌三缺一推广员</text>
+  </view>
+  <view class="xieyi">
+    <view>1.推广时严禁使用带暗示的赌博倾向用语，一经发现永久取消推广员资格，情节严重的将举报公安机关处理！</view>
+    <view>2.平台有权随时调整推广奖励的额度和方式。</view>
+    <view>3.连续3个月内推广总收益低于20元的，平台有权取消推广员资格。</view>
+    <view>4.推广员资格为每年年审一次，年审不通过的将取消推广员资格。</view>
+  </view>
+  <view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="游戏ID" bindinput="onInputUserid" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="真实姓名" bindinput="onInputName" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="digit" placeholder="手机号码" bindinput='onInputMobile' />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="digit" placeholder="激励比例" bindinput='onInputReward' value="{{reward}}" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="备注" bindinput='onInputTgDesc' />
+      </view>
+    </view>
+    <button type="primary" bindtap="onButtonRegister">开通推广员</button>
+  </view>
+</view>

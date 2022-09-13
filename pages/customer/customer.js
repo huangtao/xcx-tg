@@ -17,7 +17,7 @@ Page({
     var that = this;
     wx.getSystemInfo({
       success: function(res) {
-        that.setData({
+        that.setData({ 
           winWidth: res.windowWidth,
           winHeight: res.windowHeight
         });

@@ -2,10 +2,11 @@
 <view class='page'>
   <!-- 页头 -->
   <view class="xieyi">
-    <text>1.连续3个月内推广总收益低于20元的，平台有权取消推广员资格。</text>
-    <text>2.推广员资格为每年年审一次，年审不通过的将取消推广员资格。</text>
-    <text>3.平台有权随时调整奖励额度和方式。</text>
-    <text>4.此推广员系统并未开放注册,联系客服或上级开通后方可使用。</text>
+    <text>1.推广员在第一个月内不能绑定10个客户以上的，平台有权取消推广员资格。</text>
+    <text>2.推广员每个月的推广奖励少于500元的，平台有权取消推广员资格。</text>
+    <text>3.推广员资格为每年年审一次，年审不通过的将取消推广员资格。</text>
+    <text>4.平台有权随时调整奖励额度和方式。</text>
+    <text>5.此推广员系统并未开放注册,联系客服或上级开通后方可使用。</text>
     <checkbox-group bindchange="checkboxChange">
       <checkbox>同意以上用户协议</checkbox>
     </checkbox-group>
@@ -25,5 +26,5 @@
     -->
   </view>
   <!-- 页脚 -->
-  <view class="weui-footer">Copyright © 2018 云牌网络</view>
+  <view class="weui-footer">Copyright © 2021 云牌网络</view>
 </view>

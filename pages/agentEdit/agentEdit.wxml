@@ -1,0 +1,24 @@
+<!--register.wxml-->
+<view class="page-body">
+  <view class="page-section">
+    <text>云牌三缺一推广员修改</text>
+  </view>
+  <view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="游戏ID" bindinput="onInputUserid" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="digit" placeholder="手机号码" bindinput='onInputMobile' />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="digit" placeholder="激励比例" bindinput='onInputReward' value="{{reward}}" />
+      </view>
+    </view>
+    <button type="primary" bindtap="onButtonRegister">修改</button>
+  </view>
+</view>

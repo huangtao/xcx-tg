@@ -34,19 +34,37 @@ Page({
         show: true
       },
       {
-        name: '开通推广员',
-        url: '/pages/tgysp/tgysp',
-        icon: 'iconfont icon-shenhe',
-        show: true
-      },
-      {
         name: '推广赠送',
         url: '/pages/tgzs/tgzs',
         icon: 'iconfont icon-48',
         show: true
       },
       {
+        name: '开通推广员',
+        url: '/pages/tgysp/tgysp',
+        icon: 'iconfont icon-shenhe',
+        show: false
+      },
+      {
         name: '提现审批',
+        url: '/pages/txsp/txsp',
+        icon: 'iconfont icon-shenhe1',
+        show: false
+      },
+      {
+        name: '新版本推广员',
+        url: '/pages/agent/agent',
+        icon: 'iconfont icon-shenhe',
+        show: false
+      },
+      {
+        name: '推广员修改',
+        url: '/pages/agentEdit/agentEdit',
+        icon: 'iconfont icon-shenhe',
+        show: false
+      },
+      {
+        name: '新版本审批',
         url: '/pages/txsp/txsp',
         icon: 'iconfont icon-shenhe1',
         show: false
@@ -59,7 +77,11 @@ Page({
     //   this.data.routers[4].show = true;
     // }
     if (app.globalData.userInfo.qx_txsp > 0) {
+      this.data.routers[5].show = true;
       this.data.routers[6].show = true;
+      this.data.routers[7].show = true;
+      this.data.routers[8].show = true;
+      this.data.routers[9].show = true;
     }
     this.setData({
       cash: app.globalData.userInfo.cash,
